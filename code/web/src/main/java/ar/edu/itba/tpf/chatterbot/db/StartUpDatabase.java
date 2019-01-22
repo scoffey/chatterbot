@@ -394,16 +394,16 @@ public class StartUpDatabase {
         ChatterbotService chatterbotService = (ChatterbotService) ctx.getBean("chatterbotService");
 
         chatterbotService.persistBaseAction(new WebServiceAction("Consultar saldo",
-                "http://localhost:8081/chatterbot-business/clients?wsdl", "Clients", "getSaldoCuenta"));
+                "http://localhost:8080/chatterbot-business/clients?wsdl", "Clients", "getSaldoCuenta"));
 
         chatterbotService.persistBaseAction(new WebServiceAction("Validar número de cuenta",
-                "http://localhost:8081/chatterbot-business/clients?wsdl", "Clients", "validarNumeroCuenta"));
+                "http://localhost:8080/chatterbot-business/clients?wsdl", "Clients", "validarNumeroCuenta"));
 
         chatterbotService.persistBaseAction(new WebServiceAction("Validar número de tarjeta de crédito",
-                "http://localhost:8081/chatterbot-business/clients?wsdl", "Clients", "validarNumeroTarjeta"));
+                "http://localhost:8080/chatterbot-business/clients?wsdl", "Clients", "validarNumeroTarjeta"));
 
         chatterbotService.persistBaseAction(new WebServiceAction("Consultar vencimiento de tarjeta de crédito",
-                "http://localhost:8081/chatterbot-business/clients?wsdl", "Clients", "consultarVencimientoTarjeta"));
+                "http://localhost:8080/chatterbot-business/clients?wsdl", "Clients", "consultarVencimientoTarjeta"));
     }
     
     public void loadErrorLogs() {

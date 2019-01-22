@@ -4,8 +4,7 @@
 #
 # Directorio base del Tomcat.
 #
-#TOMCAT_BASE_DIR=/home/andy/programas/apache-tomcat-6.0.18
-TOMCAT_BASE_DIR=/home/agregoir/programas/apache-tomcat-6.0.18
+TOMCAT_BASE_DIR=../apache-tomcat-6.0.32
 
 #
 # Copiamos las aplicaciones web

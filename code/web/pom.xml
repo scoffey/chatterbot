@@ -30,6 +30,10 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>appfuse</id>
+			<url>https://oss.sonatype.org/content/repositories/appfuse/</url>
+		</repository>
 	</repositories>
 
 	<build>
@@ -60,20 +64,26 @@
 				<version>1.1</version>
 
 				<dependencies>
-					<!-- specify the dependent jdbc driver here -->
+					<!-- specify the dependent jdbc driver here -//->
 					<dependency>
 						<groupId>ojdbc</groupId>
 						<artifactId>ojdbc</artifactId>
 						<version>14</version>
 					</dependency>
+					-->
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.47</version>
+					</dependency>
 				</dependencies>
 
 				<!-- common configuration shared by all executions -->
 				<configuration>
-					<driver>oracle.jdbc.driver.OracleDriver</driver>
-					<url>jdbc:oracle:thin:@localhost:1521:ITBA</url>
-					<username>agregoir</username>
-					<password>numero02</password>
+					<driver>com.mysql.jdbc.Driver</driver>
+					<url>jdbc:mysql://localhost:3306/chatterbot?useSSL=false</url>
+					<username>chatterbot</username>
+					<password>chatterbot</password>
 					<srcFiles>
 						<srcFile>../schema.sql</srcFile>
 					</srcFiles>
@@ -84,6 +94,13 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.1</version>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.47</version>
+					</dependency>
+				</dependencies>
 				<executions>
 					<execution>
 						<goals>
@@ -125,6 +142,11 @@
 			<version>1.0.5</version>
 		</dependency>
 
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.47</version>
+		</dependency>
 
 		<!-- RichFaces Tags -->
 
